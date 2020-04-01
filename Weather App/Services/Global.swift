@@ -23,6 +23,35 @@ enum VCIdendifier {
     static let idVCDaily = "dailyVC"
 }
 
+// MARK: detail Weather TableView Cell Labels
+enum labelsCell {
+    static let wind = "Wind"
+    static let humidity = "Humidity"
+    static let dewPoint = "Dew Point"
+    static let pressure = "Pressure"
+    static let visibility = "Visibility"
+}
+
+// MARK: detail Weather TableView Cell Labels
+enum localImagesNames {
+    static let wind = "windy"
+    static let humidity = "Humidity"
+    static let dewPoint = "DewPoint"
+    static let pressure = "Pressure"
+    static let visibility = "Visibility"
+}
+
+// MARK: --
+struct DetailWeather {
+    let title : String
+    let icon : String
+    let result : String
+    
+}
+
+
+
+
 
 typealias success = (Weather) -> ()
 typealias error = (Error) -> ()
