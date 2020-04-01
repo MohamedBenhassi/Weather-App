@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nu7-Bs-sN2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nu7-Bs-sN2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,11 +108,14 @@
                                     <segment title="Hourly"/>
                                     <segment title="Daily"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="ezM-ST-8HA"/>
+                                </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2O-64-m6b">
                                 <rect key="frame" x="20" y="374" width="374" height="439"/>
                                 <connections>
-                                    <segue destination="FkJ-lO-7gw" kind="embed" id="wJd-cf-l6I"/>
+                                    <segue destination="nqL-Oa-kTD" kind="embed" id="C41-s9-D2E"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -143,6 +147,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
+        </scene>
+        <!--More Detail Pager Controller-->
+        <scene sceneID="zez-wC-mcX">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="nqL-Oa-kTD" customClass="moreDetailPagerController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t1G-By-KgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="744"/>
+        </scene>
+        <!--Weather DetailVC-->
+        <scene sceneID="5LR-ev-Tvz">
+            <objects>
+                <viewController storyboardIdentifier="detailVC" id="s7n-Oa-WJJ" customClass="weatherDetailVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4zb-0z-VA4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pIg-W7-dbw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8zH-az-byg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298" y="1299"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="b8B-A4-w6C">
@@ -181,20 +208,35 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="MiF-sc-5DE">
+        <!--Weather DailyVC-->
+        <scene sceneID="mYN-5m-2EN">
             <objects>
-                <viewController id="FkJ-lO-7gw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9kt-Uu-dV6">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="439"/>
+                <viewController storyboardIdentifier="dailyVC" id="4eF-Gk-K2i" customClass="weatherDailyVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Pz-GH-nhq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="I1X-hB-fU2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nTj-Y4-7oo"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8OS-L9-EKt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8Q-KB-6ct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810" y="781"/>
+            <point key="canvasLocation" x="3033" y="1298"/>
+        </scene>
+        <!--Weather HourlyVC-->
+        <scene sceneID="GpK-Lb-QBc">
+            <objects>
+                <viewController storyboardIdentifier="hourlyVC" id="uqg-2J-N00" customClass="weatherHourlyVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u6w-Gk-YKP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SLB-Sg-ePw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8dC-jm-HfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126" y="1308"/>
         </scene>
     </scenes>
     <resources>

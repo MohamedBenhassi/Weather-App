@@ -8,14 +8,18 @@
 
 import UIKit
 
+
+
 class weatherVC: UIViewController {
+    
+    
+    
     @IBOutlet weak var currentWeatherTempLabel: UILabel!
     @IBOutlet weak var currentSummaryLabel: UILabel!
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var currentWeatherIcon: UIImageView!
     
     var weather : Weather?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +52,10 @@ class weatherVC: UIViewController {
     }
     
     
+    
+    @IBAction func segmentTapped(_ sender: UISegmentedControl) {
+        selectionSegementDelegate?.didSegementTapped(index: sender.selectedSegmentIndex)
+    }
     
     
     

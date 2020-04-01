@@ -9,17 +9,26 @@
 import Foundation
 import Alamofire
 
-// Dark Sky Api
+// MARK: Dark Sky Api
 class Config{
     static let baseLink = "https://api.darksky.net/forecast/"
     static let ApiKey = "09e8e244326837f3038ae2e78dcb88f1"
     static let GOOGLE_API_KEY = "AIzaSyB6gnpbKmaonbhC9bv4RFW56nZ3hrzzSHY"
 }
 
+// MARK: viewControllers identifiers
+enum VCIdendifier {
+    static let idVCDetail = "detailVC"
+    static let idVCHourly = "hourlyVC"
+    static let idVCDaily = "dailyVC"
+}
+
 
 typealias success = (Weather) -> ()
 typealias error = (Error) -> ()
 
+
+// MARK: get weather from API
 func getWeather(lati : Double, long : Double, success :  @escaping success, error : @escaping error){
    
     let forecastUrl = "\(Config.baseLink)\(Config.ApiKey)/\(lati),\(long)?lang=en"
