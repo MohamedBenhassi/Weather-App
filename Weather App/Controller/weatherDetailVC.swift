@@ -15,12 +15,11 @@ class weatherDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let nibTableViewCell = UINib(nibName: "detailCell", bundle: nil)
         detailTableView.register(nibTableViewCell, forCellReuseIdentifier: "detailCell")
-
-        currentWeatherDetailDataDelegate = self
-
+        guard let current = SharedData.weatherData?.currently  else {return}
+        loadDetailWeatherData(current: current)
+        
 
     }
     
@@ -38,6 +37,7 @@ class weatherDetailVC: UIViewController {
         listDetailWeather.append(DetailWeather(title: labelsCell.dewPoint, icon: localImagesNames.dewPoint, result: "\(dewPoint)°"))
         listDetailWeather.append(DetailWeather(title: labelsCell.pressure, icon: localImagesNames.pressure, result: "\(pressure) mb"))
         listDetailWeather.append(DetailWeather(title: labelsCell.visibility, icon: localImagesNames.visibility, result: "\(visibility) mph"))
+        self.detailTableView.reloadData()
     }
     
     // MARK: configuration of Cell
@@ -50,14 +50,6 @@ class weatherDetailVC: UIViewController {
 
 }
 
-
-extension weatherDetailVC : currentWeatherDetailData {
-    func currentWeatherData(current: Currently) {
-        loadDetailWeatherData(current: current)
-        self.detailTableView.reloadData()
-    }
-    
-}
 
 extension weatherDetailVC:UITableViewDataSource{
     

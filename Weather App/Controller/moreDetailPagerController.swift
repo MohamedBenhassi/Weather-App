@@ -24,8 +24,7 @@ class moreDetailPagerController: UIPageViewController {
         super.viewDidLoad()
         
         selectionSegementDelegate = self
-        // Select To first viewcontroller
-        setViewControllers([subViewControllers[0]], direction: .forward, animated: true, completion: nil)
+        
     }
     
 

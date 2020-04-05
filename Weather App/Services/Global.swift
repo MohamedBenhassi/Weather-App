@@ -41,7 +41,7 @@ enum localImagesNames {
     static let visibility = "Visibility"
 }
 
-// MARK: --
+// MARK: -- Detail Weather Struct 
 struct DetailWeather {
     let title : String
     let icon : String
@@ -49,7 +49,31 @@ struct DetailWeather {
     
 }
 
+// MARK: share Weather data between viewControllers
+struct SharedData {
+    static var weatherData : Weather?
+}
 
+
+// MARK: convert Time to 12 Fortmat
+func getHour12FormatFromTime(time : Double)-> String{
+        let date = Date(timeIntervalSince1970: time)
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "h a"
+        dateFormatter.amSymbol = "AM"
+        dateFormatter.pmSymbol = "PM"
+      return dateFormatter.string(from: date)
+}
+
+// MARK: convert Time to 24 Fortmat
+func getHour24FormatFromTime(time : Double)-> String{
+        let date = Date(timeIntervalSince1970: time)
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: date)
+}
 
 
 

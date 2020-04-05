@@ -12,10 +12,6 @@ protocol SegementControlSelectionDelegate {
     func didSegementTapped(index : Int)
 }
 
-protocol currentWeatherDetailData {
-    func currentWeatherData(current : Currently)
-}
 
 var selectionSegementDelegate : SegementControlSelectionDelegate?
-var currentWeatherDetailDataDelegate : currentWeatherDetailData?
 

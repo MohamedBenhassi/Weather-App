@@ -24,9 +24,8 @@ class weatherVC: UIViewController {
 
         // MARK: get weather data from API
         getWeather(lati: 33.517736, long: 7.658283, success: { (weather) in
+            SharedData.weatherData = weather
             self.updateUI(weather: weather)
-            guard let currently = weather.currently else {return}
-            currentWeatherDetailDataDelegate?.currentWeatherData(current: currently)
         }) { (error) in
             print("there is an error \(error)")
         }
@@ -39,8 +38,9 @@ class weatherVC: UIViewController {
         guard let temperature = weather.currently?.temperature else {return}
         guard let weatherSummary = weather.currently?.summary else {return}
         self.currentWeatherIcon.image = UIImage(named: icon)
-        self.currentWeatherTempLabel.text = "\(temperature)°F"
+        self.currentWeatherTempLabel.text = "\(Int(temperature))°"
         self.currentSummaryLabel.text = weatherSummary
+        selectionSegementDelegate?.didSegementTapped(index: 0)
     }
     
     

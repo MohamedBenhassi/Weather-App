@@ -254,9 +254,27 @@
                     <view key="view" contentMode="scaleToFill" id="u6w-Gk-YKP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D7G-Fe-icZ">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uqg-2J-N00" id="fvc-EM-T3d"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SLB-Sg-ePw" firstAttribute="trailing" secondItem="D7G-Fe-icZ" secondAttribute="trailing" constant="20" id="3fo-f4-1o7"/>
+                            <constraint firstItem="SLB-Sg-ePw" firstAttribute="bottom" secondItem="D7G-Fe-icZ" secondAttribute="bottom" constant="20" id="D9b-dW-qa9"/>
+                            <constraint firstItem="D7G-Fe-icZ" firstAttribute="leading" secondItem="SLB-Sg-ePw" secondAttribute="leading" constant="20" id="NcJ-a8-JRg"/>
+                            <constraint firstItem="D7G-Fe-icZ" firstAttribute="top" secondItem="SLB-Sg-ePw" secondAttribute="top" constant="20" id="QSt-jR-Vg5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SLB-Sg-ePw"/>
                     </view>
+                    <connections>
+                        <outlet property="hourlyTableView" destination="D7G-Fe-icZ" id="9W5-uK-G91"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dC-jm-HfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
