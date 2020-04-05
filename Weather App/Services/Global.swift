@@ -74,8 +74,21 @@ func getHour24FormatFromTime(time : Double)-> String{
         dateFormatter.dateFormat = "HH:mm"
         return dateFormatter.string(from: date)
 }
+// MARK: get day from Time
+func getDayFromTime(time : Double)->String{
+    let date = Date(timeIntervalSince1970: time)
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "en_US")
+    dateFormatter.dateFormat = "EEEE"
+    return dateFormatter.string(from: date)
+}
 
-
+// MARK: check today 
+func checkToday(sysDate : Date, dateInTime : Double)->Bool{
+    let dateFromTime = Date(timeIntervalSince1970: dateInTime)
+    let order = Calendar.current.compare(sysDate, to: dateFromTime, toGranularity: .day) == .orderedSame
+    return order
+}
 
 typealias success = (Weather) -> ()
 typealias error = (Error) -> ()
