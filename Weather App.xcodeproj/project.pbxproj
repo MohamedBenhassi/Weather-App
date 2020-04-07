@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0050BF87243A1F2100DECF90 /* locationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BF86243A1F2100DECF90 /* locationsVC.swift */; };
+		0050BF89243A2DB500DECF90 /* searchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BF88243A2DB500DECF90 /* searchPlaceVC.swift */; };
+		0050BF8C243A670D00DECF90 /* weatherOffline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0050BF8A243A670D00DECF90 /* weatherOffline.xcdatamodeld */; };
 		0052755B2433A1E5000C84C2 /* weatherDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052755A2433A1E5000C84C2 /* weatherDetailVC.swift */; };
 		0052755D2433A1F6000C84C2 /* weatherHourlyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052755C2433A1F6000C84C2 /* weatherHourlyVC.swift */; };
 		0052755F2433A204000C84C2 /* weatherDailyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052755E2433A204000C84C2 /* weatherDailyVC.swift */; };
@@ -26,9 +29,13 @@
 		00A835432434BE9900122DE7 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A835422434BE9900122DE7 /* Protocols.swift */; };
 		00F58C662438EC8E00DE0D5F /* hourlyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F58C642438EC8E00DE0D5F /* hourlyCell.swift */; };
 		00F58C672438EC8E00DE0D5F /* hourlyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F58C652438EC8E00DE0D5F /* hourlyCell.xib */; };
+		C059B14BCAD93B28BA4B15CA /* Pods_Weather_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BBBD35315285AFE118B88F /* Pods_Weather_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0050BF86243A1F2100DECF90 /* locationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationsVC.swift; sourceTree = "<group>"; };
+		0050BF88243A2DB500DECF90 /* searchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchPlaceVC.swift; sourceTree = "<group>"; };
+		0050BF8B243A670D00DECF90 /* weatherOffline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = weatherOffline.xcdatamodel; sourceTree = "<group>"; };
 		0052755A2433A1E5000C84C2 /* weatherDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherDetailVC.swift; sourceTree = "<group>"; };
 		0052755C2433A1F6000C84C2 /* weatherHourlyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherHourlyVC.swift; sourceTree = "<group>"; };
 		0052755E2433A204000C84C2 /* weatherDailyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherDailyVC.swift; sourceTree = "<group>"; };
@@ -60,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C059B14BCAD93B28BA4B15CA /* Pods_Weather_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +115,8 @@
 				0052755A2433A1E5000C84C2 /* weatherDetailVC.swift */,
 				0052755C2433A1F6000C84C2 /* weatherHourlyVC.swift */,
 				0052755E2433A204000C84C2 /* weatherDailyVC.swift */,
+				0050BF86243A1F2100DECF90 /* locationsVC.swift */,
+				0050BF88243A2DB500DECF90 /* searchPlaceVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				009D4E0224336AD6002F38C1 /* Weather.swift */,
+				0050BF8A243A670D00DECF90 /* weatherOffline.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,7 +303,10 @@
 				009D4DE62432594F002F38C1 /* AppDelegate.swift in Sources */,
 				009D4E0724339840002F38C1 /* moreDetailPagerController.swift in Sources */,
 				0052755D2433A1F6000C84C2 /* weatherHourlyVC.swift in Sources */,
+				0050BF8C243A670D00DECF90 /* weatherOffline.xcdatamodeld in Sources */,
 				00A835432434BE9900122DE7 /* Protocols.swift in Sources */,
+				0050BF89243A2DB500DECF90 /* searchPlaceVC.swift in Sources */,
+				0050BF87243A1F2100DECF90 /* locationsVC.swift in Sources */,
 				0070348F2434D90100AFFFED /* detailCell.swift in Sources */,
 				0052755F2433A204000C84C2 /* weatherDailyVC.swift in Sources */,
 				0052755B2433A1E5000C84C2 /* weatherDetailVC.swift in Sources */,
@@ -447,7 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QWFGAPTNH;
 				INFOPLIST_FILE = "Weather App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,7 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QWFGAPTNH;
 				INFOPLIST_FILE = "Weather App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,6 +518,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0050BF8A243A670D00DECF90 /* weatherOffline.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0050BF8B243A670D00DECF90 /* weatherOffline.xcdatamodel */,
+			);
+			currentVersion = 0050BF8B243A670D00DECF90 /* weatherOffline.xcdatamodel */;
+			path = weatherOffline.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 009D4DDA2432594F002F38C1 /* Project object */;
 }

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--WeatherVC-->
+        <!--Forcast-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="weatherVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -139,9 +139,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DWR-Xa-M2W">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="aPq-cV-3tu"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Forcast" id="DWR-Xa-M2W"/>
                     <connections>
                         <outlet property="currentSummaryLabel" destination="62R-hP-vfg" id="zqb-eO-lbI"/>
                         <outlet property="currentWeatherIcon" destination="Ebp-Y8-RqC" id="JLY-SM-D6o"/>
@@ -159,7 +157,58 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="nqL-Oa-kTD" customClass="moreDetailPagerController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1G-By-KgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1958" y="744"/>
+            <point key="canvasLocation" x="2868.115942028986" y="743.63839285714278"/>
+        </scene>
+        <!--Search PlaceVC-->
+        <scene sceneID="Snn-Kb-jZ3">
+            <objects>
+                <viewController id="onn-OK-brY" customClass="searchPlaceVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zfj-Tt-P16">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4WD-f4-Pk0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placesTableViewCell" id="swF-Bf-uHw">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="swF-Bf-uHw" id="WhI-i4-Tdd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="onn-OK-brY" id="uaN-Ec-LSm"/>
+                                    <outlet property="delegate" destination="onn-OK-brY" id="cI2-gH-rNm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fEs-iF-dxv" firstAttribute="bottom" secondItem="4WD-f4-Pk0" secondAttribute="bottom" id="WH5-eR-7Ji"/>
+                            <constraint firstItem="4WD-f4-Pk0" firstAttribute="top" secondItem="fEs-iF-dxv" secondAttribute="top" id="hwq-7y-Scd"/>
+                            <constraint firstItem="4WD-f4-Pk0" firstAttribute="leading" secondItem="fEs-iF-dxv" secondAttribute="leading" id="qxF-zL-nPn"/>
+                            <constraint firstItem="fEs-iF-dxv" firstAttribute="trailing" secondItem="4WD-f4-Pk0" secondAttribute="trailing" id="rKg-Yy-8ws"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fEs-iF-dxv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OtY-X8-IGb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="DCU-rU-Q91">
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="onn-OK-brY" id="Qv3-DV-DdI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="placesTableView" destination="4WD-f4-Pk0" id="Aj6-aX-iBX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="off-WJ-5r4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="1592"/>
         </scene>
         <!--Weather DetailVC-->
         <scene sceneID="5LR-ev-Tvz">
@@ -193,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zH-az-byg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297.1014492753625" y="1298.4375"/>
+            <point key="canvasLocation" x="3117.3913043478265" y="1298.4375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="b8B-A4-w6C">
@@ -207,17 +256,74 @@
                     </tabBar>
                     <connections>
                         <segue destination="9s4-7O-thk" kind="relationship" relationship="viewControllers" id="6sa-xr-Gpt"/>
+                        <segue destination="Q3R-pw-lqG" kind="relationship" relationship="viewControllers" id="L69-xB-7Yq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKj-iz-ZeR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--Item-->
+        <!--Locations-->
+        <scene sceneID="9l6-GX-xbA">
+            <objects>
+                <viewController id="GTu-4p-JJP" customClass="locationsVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f9p-ut-rQu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HRf-Lz-kox">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="citiesCell" id="YJw-Fa-dtX">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YJw-Fa-dtX" id="YCq-Uo-KzE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GTu-4p-JJP" id="L0X-0f-4RL"/>
+                                    <outlet property="delegate" destination="GTu-4p-JJP" id="hwP-w5-tk1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HRf-Lz-kox" firstAttribute="top" secondItem="8OV-YB-Mt8" secondAttribute="top" id="WUi-8d-4xJ"/>
+                            <constraint firstItem="HRf-Lz-kox" firstAttribute="leading" secondItem="8OV-YB-Mt8" secondAttribute="leading" id="b6P-A7-xQ2"/>
+                            <constraint firstItem="8OV-YB-Mt8" firstAttribute="bottom" secondItem="HRf-Lz-kox" secondAttribute="bottom" id="rNI-a1-2vq"/>
+                            <constraint firstItem="8OV-YB-Mt8" firstAttribute="trailing" secondItem="HRf-Lz-kox" secondAttribute="trailing" id="svL-qD-62x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8OV-YB-Mt8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Locations" id="Ekr-T3-ITf">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="location" id="ExW-c1-tzN">
+                            <connections>
+                                <action selector="gpsButtonTapped:" destination="GTu-4p-JJP" id="rIt-yG-Qc6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vGB-oL-fI1">
+                            <connections>
+                                <segue destination="9TV-If-Ffu" kind="presentation" modalPresentationStyle="fullScreen" id="vAd-HJ-46P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="citiesTableView" destination="HRf-Lz-kox" id="2gP-2r-av3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NB2-Ez-iNp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="896.65178571428567"/>
+        </scene>
+        <!--Forcast-->
         <scene sceneID="sqX-33-anP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9s4-7O-thk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7Kb-BL-cIQ"/>
+                    <tabBarItem key="tabBarItem" title="Forcast" image="forcast" id="7Kb-BL-cIQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WZl-vE-1Xj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -263,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8Q-KB-6ct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3033" y="1298"/>
+            <point key="canvasLocation" x="4852.1739130434789" y="1297.7678571428571"/>
         </scene>
         <!--Weather HourlyVC-->
         <scene sceneID="GpK-Lb-QBc">
@@ -296,10 +402,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dC-jm-HfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2126" y="1308"/>
+            <point key="canvasLocation" x="3944.9275362318845" y="1307.8125"/>
+        </scene>
+        <!--Your Locations-->
+        <scene sceneID="ksC-LD-s23">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q3R-pw-lqG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Your Locations" image="locations" id="EJ7-ju-B1D"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YZU-7Y-9bg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GTu-4p-JJP" kind="relationship" relationship="rootViewController" id="VA0-Xc-V2c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oh1-2h-w2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="896.65178571428567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9nH-rc-1hp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9TV-If-Ffu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YDs-nM-NKC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="onn-OK-brY" kind="relationship" relationship="rootViewController" id="6oX-iV-M1P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hqb-Dy-XXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="1592"/>
         </scene>
     </scenes>
     <resources>
+        <image name="forcast" width="25" height="25"/>
         <image name="location" width="18.5" height="18.5"/>
+        <image name="locations" width="25" height="25"/>
     </resources>
 </document>
