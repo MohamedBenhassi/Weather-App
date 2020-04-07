@@ -7,8 +7,8 @@ This app use  [Dark Sky API](https://darksky.net/dev)
 #### - wheather info 
 ![SreenshotWeatherApp1](https://user-images.githubusercontent.com/62899755/78721080-c8056d00-791e-11ea-84fc-ba50b15cc2df.png)
 
-#### - Wheather settings and Locations 
-![SreenshotWeatherApp2](https://user-images.githubusercontent.com/62899755/78721250-131f8000-791f-11ea-8e91-bd2bb0e4f7d6.png)
+#### - Wheather settings and search for Locations and List of cities 
+![SreenshotWeatherApp3](https://user-images.githubusercontent.com/62899755/78723784-ff2a4d00-7923-11ea-8742-bbe550f3494a.png)
 
 # **Features :**
 
