@@ -9,7 +9,7 @@
 import Foundation
 
 
-// MARK: -- Detail Weather Struct
+// MARK: - Detail Weather Struct
 struct DetailWeather {
     let title : String
     let icon : String

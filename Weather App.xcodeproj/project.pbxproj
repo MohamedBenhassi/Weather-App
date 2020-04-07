@@ -109,11 +109,10 @@
 		009D4DE42432594F002F38C1 /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
-				009D4DFF24328311002F38C1 /* Design */,
-				009D4DFC24325982002F38C1 /* Services */,
 				009D4DFB24325973002F38C1 /* Model */,
 				009D4DFA24325972002F38C1 /* View */,
 				009D4DF924325970002F38C1 /* Controller */,
+				009D4DFC24325982002F38C1 /* Services */,
 				009D4DE52432594F002F38C1 /* AppDelegate.swift */,
 				009D4DEE24325950002F38C1 /* Assets.xcassets */,
 				009D4DF324325950002F38C1 /* Info.plist */,
@@ -147,6 +146,7 @@
 				00F58C652438EC8E00DE0D5F /* hourlyCell.xib */,
 				006786E1243A04BB009E25AE /* dailyCell.swift */,
 				006786E2243A04BB009E25AE /* dailyCell.xib */,
+				009D4E002432832D002F38C1 /* CustomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,14 +173,6 @@
 				00AAB98B243CDE4A00203CEF /* Converter.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		009D4DFF24328311002F38C1 /* Design */ = {
-			isa = PBXGroup;
-			children = (
-				009D4E002432832D002F38C1 /* CustomView.swift */,
-			);
-			path = Design;
 			sourceTree = "<group>";
 		};
 		00B51158243CC02700E22B2E /* Core Data */ = {
@@ -506,7 +498,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -528,7 +520,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

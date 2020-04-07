@@ -42,7 +42,7 @@ class weatherDetailVC: UIViewController {
             listDetailWeather.removeAll()
         }
         listDetailWeather.append(DetailWeather(title: labelsCell.wind, icon: localImagesNames.wind, result: "\(wind) mph"))
-        listDetailWeather.append(DetailWeather(title: labelsCell.humidity, icon: localImagesNames.humidity, result: "\(humidtyPercent)%"))
+        listDetailWeather.append(DetailWeather(title: labelsCell.humidity, icon: localImagesNames.humidity, result: "\(Int(humidtyPercent))%"))
         if WeatherSettings.temperatureType.value(forKey: "tempTypeKey") as? String == "C"{
             let tempCelsius = convertToCelsius(fahrenheit: dewPoint)
             listDetailWeather.append(DetailWeather(title: labelsCell.dewPoint, icon: localImagesNames.dewPoint, result: "\(tempCelsius)°"))
