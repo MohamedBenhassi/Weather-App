@@ -12,20 +12,20 @@ import CoreData
 
 
 
-// MARK: Dark Sky Api
+// MARK: - Dark Sky Api
 struct Config{
     static let baseLink = "https://api.darksky.net/forecast/"
     static let ApiKey = "09e8e244326837f3038ae2e78dcb88f1"
 }
 
-// MARK: viewControllers identifiers
+// MARK: - viewControllers identifiers
 enum VCIdendifier {
     static let idVCDetail = "detailVC"
     static let idVCHourly = "hourlyVC"
     static let idVCDaily = "dailyVC"
 }
 
-// MARK: detail Weather TableView Cell Labels
+// MARK: - detail Weather TableView Cell Labels
 enum labelsCell {
     static let wind = "Wind"
     static let humidity = "Humidity"
@@ -34,7 +34,7 @@ enum labelsCell {
     static let visibility = "Visibility"
 }
 
-// MARK: detail Weather TableView Cell Labels
+// MARK: - detail Weather TableView Cell Labels
 enum localImagesNames {
     static let wind = "windy"
     static let humidity = "Humidity"
@@ -44,13 +44,17 @@ enum localImagesNames {
 }
 
 
-// MARK: share Weather data between viewControllers
+// MARK: - share Weather data between viewControllers
 struct SharedData {
     static var weatherData : Weather?
 }
 
 
-
+// MARK: - Setting UserDefault Singleton
+struct WeatherSettings{
+    static var temperatureType = UserDefaults.standard
+    static var timeFormat = UserDefaults.standard
+}
 
 
 
