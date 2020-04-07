@@ -37,7 +37,7 @@ class locationsVC: UIViewController {
                switch CLLocationManager.authorizationStatus() {
                   case .notDetermined, .restricted, .denied:
                       print("No access")
-                      //alertMessage(vc: self, title: "Error Location", msg: "Location services are not enabled", btnTitlte: "Ok")
+                      errorAlert("Error Location", "Location services are not enabled", vc: self)
                       self.loacationManager.requestWhenInUseAuthorization()
                       self.loacationManager.desiredAccuracy = kCLLocationAccuracyBest
                       self.loacationManager.startMonitoringSignificantLocationChanges()
@@ -48,10 +48,11 @@ class locationsVC: UIViewController {
                   break
               }
           } else {
-                  print("Location services are not enabled")
-                  self.loacationManager.requestWhenInUseAuthorization()
-                  self.loacationManager.desiredAccuracy = kCLLocationAccuracyBest
-                  self.loacationManager.startMonitoringSignificantLocationChanges()
+                    print("Location services are not enabled")
+                    errorAlert("Error Location", "Location services are not enabled", vc: self)
+                    self.loacationManager.requestWhenInUseAuthorization()
+                    self.loacationManager.desiredAccuracy = kCLLocationAccuracyBest
+                    self.loacationManager.startMonitoringSignificantLocationChanges()
               }
       }
      

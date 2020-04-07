@@ -41,7 +41,7 @@ class weatherVC: UIViewController {
             SharedData.weatherData = weather
             self.updateUI(weather: weather, cityName: currentCity.name ?? "--")
         }) { (error) in
-            print("Error \(error.localizedDescription)")
+            errorAlert("Error", error.localizedDescription, vc: self)
         }
     }
     

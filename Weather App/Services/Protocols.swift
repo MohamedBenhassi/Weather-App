@@ -12,6 +12,5 @@ protocol SegementControlSelectionDelegate {
     func didSegementTapped(index : Int)
 }
 
-
 var selectionSegementDelegate : SegementControlSelectionDelegate?
 

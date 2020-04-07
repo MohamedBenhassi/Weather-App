@@ -157,7 +157,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="nqL-Oa-kTD" customClass="moreDetailPagerController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1G-By-KgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868.115942028986" y="743.63839285714278"/>
+            <point key="canvasLocation" x="2872" y="105"/>
         </scene>
         <!--Search PlaceVC-->
         <scene sceneID="Snn-Kb-jZ3">
@@ -242,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zH-az-byg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3117.3913043478265" y="1298.4375"/>
+            <point key="canvasLocation" x="3971.0144927536235" y="691.74107142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="b8B-A4-w6C">
@@ -257,6 +257,7 @@
                     <connections>
                         <segue destination="9s4-7O-thk" kind="relationship" relationship="viewControllers" id="6sa-xr-Gpt"/>
                         <segue destination="Q3R-pw-lqG" kind="relationship" relationship="viewControllers" id="L69-xB-7Yq"/>
+                        <segue destination="Qxb-zV-bl6" kind="relationship" relationship="viewControllers" id="n26-FH-LwN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKj-iz-ZeR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -317,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NB2-Ez-iNp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="896.65178571428567"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="896.65178571428567"/>
         </scene>
         <!--Forcast-->
         <scene sceneID="sqX-33-anP">
@@ -369,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8Q-KB-6ct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4852.1739130434789" y="1297.7678571428571"/>
+            <point key="canvasLocation" x="5705.7971014492759" y="691.74107142857144"/>
         </scene>
         <!--Weather HourlyVC-->
         <scene sceneID="GpK-Lb-QBc">
@@ -402,7 +403,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dC-jm-HfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3944.9275362318845" y="1307.8125"/>
+            <point key="canvasLocation" x="4800" y="701.78571428571422"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="zBK-AS-bew">
+            <objects>
+                <tableViewController id="rOU-u4-EaU" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1oD-hN-nQO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Qbz-O0-goV">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qbz-O0-goV" id="0KW-ir-V18">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rOU-u4-EaU" id="iz0-7v-w3s"/>
+                            <outlet property="delegate" destination="rOU-u4-EaU" id="7iD-Oa-XIg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1gc-u4-r6B"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPL-a5-Mqc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.6956521739130448" y="835.71428571428567"/>
         </scene>
         <!--Your Locations-->
         <scene sceneID="ksC-LD-s23">
@@ -421,7 +451,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oh1-2h-w2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="896.65178571428567"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="896.65178571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9nH-rc-1hp">
@@ -441,10 +471,30 @@
             </objects>
             <point key="canvasLocation" x="138" y="1592"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="Vrg-F4-xfY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qxb-zV-bl6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="setting" id="fK1-kO-m4R"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NTX-L7-hwv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rOU-u4-EaU" kind="relationship" relationship="rootViewController" id="O0x-MK-kZI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y98-sc-1xO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-901.44927536231887" y="835.71428571428567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="forcast" width="25" height="25"/>
         <image name="location" width="18.5" height="18.5"/>
         <image name="locations" width="25" height="25"/>
+        <image name="setting" width="23" height="23"/>
     </resources>
 </document>

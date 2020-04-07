@@ -83,6 +83,7 @@ extension searchPlaceVC:MKLocalSearchCompleterDelegate{
     }
     func completer(_ completer: MKLocalSearchCompleter, didFailWithError error: Error) {
         // handle error
-        print("error searching for place \(error.localizedDescription)")
+        errorAlert("Error", error.localizedDescription, vc: self)
+
     }
 }
