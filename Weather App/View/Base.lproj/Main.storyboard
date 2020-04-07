@@ -145,6 +145,7 @@
                         <outlet property="currentWeatherIcon" destination="Ebp-Y8-RqC" id="JLY-SM-D6o"/>
                         <outlet property="currentWeatherTempLabel" destination="Gmu-PX-KEP" id="3ww-7q-PRE"/>
                         <outlet property="locationNameLabel" destination="oID-lw-PBN" id="rwF-te-cfB"/>
+                        <outlet property="pagerSegement" destination="13t-02-krR" id="UuL-Db-Gtj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

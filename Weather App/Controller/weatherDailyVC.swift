@@ -19,6 +19,12 @@ class weatherDailyVC: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Load TableView before load of View
+        self.dailyTableView.reloadData()
+    }
+    
     
     // MARK: configuration of Cell
     func configCell(cell : dailyCell, indexPath : IndexPath ){

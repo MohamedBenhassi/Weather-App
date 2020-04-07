@@ -22,8 +22,16 @@ class dailyCell: UITableViewCell {
         guard let tempMax = daily.temperatureHigh else {return}
         guard let iconOfTemp = daily.icon else {return}
         let dayName = getDayFromTime(time: Double(dailyTime))
-        self.lowTempLabel.text = "\(Int(tempLow))°"
-        self.maxTempLabel.text = "\(Int(tempMax))°"
+        // check Temperature Degree Type
+        if WeatherSettings.temperatureType.value(forKey: "tempTypeKey") as? String == "C"{
+            let tempLowCelsius = convertToCelsius(fahrenheit: tempLow)
+            let tempMaxCelsius = convertToCelsius(fahrenheit: tempMax)
+            self.lowTempLabel.text = "\(Int(tempLowCelsius))°"
+            self.maxTempLabel.text = "\(Int(tempMaxCelsius))°"
+        }else{
+            self.lowTempLabel.text = "\(Int(tempLow))°"
+            self.maxTempLabel.text = "\(Int(tempMax))°"
+        }
         self.tempIcon.image = UIImage(named: iconOfTemp)
         self.tempIcon.tintColor = #colorLiteral(red: 0.5741485357, green: 0.5741624236, blue: 0.574154973, alpha: 1)
         let isToday = checkToday(sysDate: Date(), dateInTime: Double(dailyTime))

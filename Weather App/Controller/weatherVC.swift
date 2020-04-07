@@ -13,7 +13,7 @@ import UIKit
 class weatherVC: UIViewController {
     
     
-    
+    @IBOutlet weak var pagerSegement: UISegmentedControl!
     @IBOutlet weak var currentWeatherTempLabel: UILabel!
     @IBOutlet weak var currentSummaryLabel: UILabel!
     @IBOutlet weak var locationNameLabel: UILabel!
@@ -51,9 +51,18 @@ class weatherVC: UIViewController {
         guard let temperature = weather.currently?.temperature else {return}
         guard let weatherSummary = weather.currently?.summary else {return}
         self.currentWeatherIcon.image = UIImage(named: icon)
-        self.currentWeatherTempLabel.text = "\(Int(temperature))°"
+        self.currentWeatherIcon.tintColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
         self.currentSummaryLabel.text = weatherSummary
         self.locationNameLabel.text = cityName
+        // check Temperature Degree Type
+        if WeatherSettings.temperatureType.value(forKey: "tempTypeKey") as? String == "C"{
+            let tempCelsius = convertToCelsius(fahrenheit: temperature)
+            self.currentWeatherTempLabel.text = "\(tempCelsius)°"
+        }else{
+            self.currentWeatherTempLabel.text = "\(Int(temperature))°"
+        }
+        // Load the first page in container pager view
+        pagerSegement.selectedSegmentIndex = 0
         selectionSegementDelegate?.didSegementTapped(index: 0)
     }
     

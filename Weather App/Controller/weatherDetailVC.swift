@@ -17,10 +17,16 @@ class weatherDetailVC: UIViewController {
         super.viewDidLoad()
         let nibTableViewCell = UINib(nibName: "detailCell", bundle: nil)
         detailTableView.register(nibTableViewCell, forCellReuseIdentifier: "detailCell")
-        guard let current = SharedData.weatherData?.currently  else {return}
-        loadDetailWeatherData(current: current)
+
         
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let current = SharedData.weatherData?.currently  else {return}
+        loadDetailWeatherData(current: current)
+        self.detailTableView.reloadData()
     }
     
     
@@ -29,14 +35,22 @@ class weatherDetailVC: UIViewController {
         guard let wind = current.windSpeed else {return}
         guard let humidty = current.humidity else {return}
         let humidtyPercent = humidty * 100
-        guard let dewPoint = current.humidity else {return}
+        guard let dewPoint = current.dewPoint else {return}
         guard let pressure = current.pressure else {return}
         guard let visibility = current.visibility else {return}
+        if listDetailWeather.count > 0 {
+            listDetailWeather.removeAll()
+        }
         listDetailWeather.append(DetailWeather(title: labelsCell.wind, icon: localImagesNames.wind, result: "\(wind) mph"))
         listDetailWeather.append(DetailWeather(title: labelsCell.humidity, icon: localImagesNames.humidity, result: "\(humidtyPercent)%"))
-        listDetailWeather.append(DetailWeather(title: labelsCell.dewPoint, icon: localImagesNames.dewPoint, result: "\(dewPoint)°"))
-        listDetailWeather.append(DetailWeather(title: labelsCell.pressure, icon: localImagesNames.pressure, result: "\(pressure) mb"))
-        listDetailWeather.append(DetailWeather(title: labelsCell.visibility, icon: localImagesNames.visibility, result: "\(visibility) mph"))
+        if WeatherSettings.temperatureType.value(forKey: "tempTypeKey") as? String == "C"{
+            let tempCelsius = convertToCelsius(fahrenheit: dewPoint)
+            listDetailWeather.append(DetailWeather(title: labelsCell.dewPoint, icon: localImagesNames.dewPoint, result: "\(tempCelsius)°"))
+        }else{
+            listDetailWeather.append(DetailWeather(title: labelsCell.dewPoint, icon: localImagesNames.dewPoint, result: "\(Int(dewPoint))°"))
+        }
+        listDetailWeather.append(DetailWeather(title: labelsCell.pressure, icon: localImagesNames.pressure, result: "\(Int(pressure)) mb"))
+        listDetailWeather.append(DetailWeather(title: labelsCell.visibility, icon: localImagesNames.visibility, result: "\(Int(visibility)) mph"))
         self.detailTableView.reloadData()
     }
     

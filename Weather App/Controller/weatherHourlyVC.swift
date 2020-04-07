@@ -19,6 +19,12 @@ class weatherHourlyVC: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Load TableView before load of View
+        self.hourlyTableView.reloadData()
+    }
+    
     
     // MARK: configuration of Cell
     func configCell(cell : hourlyCell, indexPath : IndexPath ){
