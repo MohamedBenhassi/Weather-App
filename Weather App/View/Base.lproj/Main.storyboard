@@ -243,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zH-az-byg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3971.0144927536235" y="691.74107142857144"/>
+            <point key="canvasLocation" x="3671" y="100"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="b8B-A4-w6C">
@@ -371,7 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8Q-KB-6ct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5705.7971014492759" y="691.74107142857144"/>
+            <point key="canvasLocation" x="5406" y="100"/>
         </scene>
         <!--Weather HourlyVC-->
         <scene sceneID="GpK-Lb-QBc">
@@ -404,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dC-jm-HfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4800" y="701.78571428571422"/>
+            <point key="canvasLocation" x="4499" y="110"/>
         </scene>
         <!--Settings-->
         <scene sceneID="zBK-AS-bew">
