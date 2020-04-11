@@ -10,8 +10,7 @@ import UIKit
 
 
 
-class weatherVC: UIViewController {
-    
+class WeatherVC: UIViewController {
     
     @IBOutlet weak var pagerSegement: UISegmentedControl!
     @IBOutlet weak var currentWeatherTempLabel: UILabel!
@@ -22,10 +21,7 @@ class weatherVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -65,8 +61,6 @@ class weatherVC: UIViewController {
         pagerSegement.selectedSegmentIndex = 0
         selectionSegementDelegate?.didSegementTapped(index: 0)
     }
-    
-    
     
     @IBAction func segmentTapped(_ sender: UISegmentedControl) {
         selectionSegementDelegate?.didSegementTapped(index: sender.selectedSegmentIndex)

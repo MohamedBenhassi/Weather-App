@@ -34,12 +34,6 @@ struct Currently: Codable {
     let visibility, ozone: Double? 
 }
 
-
-
-
-
-
-
 // MARK: - Daily
 struct Daily: Codable {
     let summary: String?

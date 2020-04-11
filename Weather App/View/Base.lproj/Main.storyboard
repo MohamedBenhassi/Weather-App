@@ -11,7 +11,7 @@
         <!--Forcast-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="weatherVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +155,7 @@
         <!--More Detail Pager Controller-->
         <scene sceneID="zez-wC-mcX">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="nqL-Oa-kTD" customClass="moreDetailPagerController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="nqL-Oa-kTD" customClass="MoreDetailPagerController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1G-By-KgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2872" y="105"/>
@@ -163,7 +163,7 @@
         <!--Search PlaceVC-->
         <scene sceneID="Snn-Kb-jZ3">
             <objects>
-                <viewController id="onn-OK-brY" customClass="searchPlaceVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="onn-OK-brY" customClass="SearchPlaceVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zfj-Tt-P16">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,7 +214,7 @@
         <!--Weather DetailVC-->
         <scene sceneID="5LR-ev-Tvz">
             <objects>
-                <viewController storyboardIdentifier="detailVC" id="s7n-Oa-WJJ" customClass="weatherDetailVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" id="s7n-Oa-WJJ" customClass="WeatherDetailVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4zb-0z-VA4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,7 +268,7 @@
         <!--Locations-->
         <scene sceneID="9l6-GX-xbA">
             <objects>
-                <viewController id="GTu-4p-JJP" customClass="locationsVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GTu-4p-JJP" customClass="LocationsVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9p-ut-rQu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NB2-Ez-iNp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="896.65178571428567"/>
+            <point key="canvasLocation" x="1958" y="846"/>
         </scene>
         <!--Forcast-->
         <scene sceneID="sqX-33-anP">
@@ -343,7 +343,7 @@
         <!--Weather DailyVC-->
         <scene sceneID="mYN-5m-2EN">
             <objects>
-                <viewController storyboardIdentifier="dailyVC" id="4eF-Gk-K2i" customClass="weatherDailyVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dailyVC" id="4eF-Gk-K2i" customClass="WeatherDailyVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Pz-GH-nhq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -376,7 +376,7 @@
         <!--Weather HourlyVC-->
         <scene sceneID="GpK-Lb-QBc">
             <objects>
-                <viewController storyboardIdentifier="hourlyVC" id="uqg-2J-N00" customClass="weatherHourlyVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="hourlyVC" id="uqg-2J-N00" customClass="WeatherHourlyVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u6w-Gk-YKP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -409,7 +409,7 @@
         <!--Settings-->
         <scene sceneID="zBK-AS-bew">
             <objects>
-                <tableViewController id="rOU-u4-EaU" customClass="settingsVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rOU-u4-EaU" customClass="SettingsVC" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="1oD-hN-nQO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -516,7 +516,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oh1-2h-w2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="896.65178571428567"/>
+            <point key="canvasLocation" x="1048" y="847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9nH-rc-1hp">

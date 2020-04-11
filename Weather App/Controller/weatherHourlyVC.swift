@@ -8,12 +8,11 @@
 
 import UIKit
 
-class weatherHourlyVC: UIViewController {
+class WeatherHourlyVC: UIViewController {
     @IBOutlet weak var hourlyTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let nibTableViewCell = UINib(nibName: "hourlyCell", bundle: nil)
         hourlyTableView.register(nibTableViewCell, forCellReuseIdentifier: "hourlyCell")
 
@@ -25,17 +24,15 @@ class weatherHourlyVC: UIViewController {
         self.hourlyTableView.reloadData()
     }
     
-    
     // MARK: configuration of Cell
-    func configCell(cell : hourlyCell, indexPath : IndexPath ){
+    func configCell(cell : HourlyCell, indexPath : IndexPath ){
         guard let hourtly = SharedData.weatherData?.hourly?.data?[indexPath.row] else {return}
         cell.configCell(hourly: hourtly)
     }
-
-
+    
 }
 
-extension weatherHourlyVC : UITableViewDataSource{
+extension WeatherHourlyVC : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let hourlyCount = SharedData.weatherData?.hourly?.data?.count else {
         return 0
@@ -44,10 +41,9 @@ extension weatherHourlyVC : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = hourlyTableView.dequeueReusableCell(withIdentifier: "hourlyCell", for: indexPath) as! hourlyCell
+        let cell = hourlyTableView.dequeueReusableCell(withIdentifier: "hourlyCell", for: indexPath) as! HourlyCell
             configCell(cell: cell, indexPath: indexPath)
         return cell
     }
-    
     
 }

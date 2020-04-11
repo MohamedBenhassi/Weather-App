@@ -9,10 +9,8 @@
 import Foundation
 import Alamofire
 
-
 typealias success = (Weather) -> ()
 typealias error = (Error) -> ()
-
 
 // MARK: get weather from API
 func getWeather(lati : Double, long : Double, success :  @escaping success, error : @escaping error){

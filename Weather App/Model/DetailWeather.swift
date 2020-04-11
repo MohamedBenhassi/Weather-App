@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 // MARK: - Detail Weather Struct
 struct DetailWeather {
     let title : String

@@ -12,7 +12,7 @@ import CoreData
 
 
 
-class locationsVC: UIViewController {
+class LocationsVC: UIViewController {
     @IBOutlet weak var citiesTableView: UITableView!
     
     let loacationManager = CLLocationManager()
@@ -20,7 +20,6 @@ class locationsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.loacationManager.delegate = self
        
     }
@@ -62,8 +61,7 @@ class locationsVC: UIViewController {
     
 }
 
-
-extension locationsVC:CLLocationManagerDelegate {
+extension LocationsVC:CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let place = locations.last
         guard let latitude = place?.coordinate.latitude else {return}
@@ -82,8 +80,7 @@ extension locationsVC:CLLocationManagerDelegate {
     }
 }
 
-
-extension locationsVC:UITableViewDataSource{
+extension LocationsVC:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listCities.count
     }
@@ -98,8 +95,7 @@ extension locationsVC:UITableViewDataSource{
     
 }
 
-extension locationsVC:UITableViewDelegate{
-    
+extension LocationsVC:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let name = listCities[indexPath.row].name else {return}
         updateCity(name: name)

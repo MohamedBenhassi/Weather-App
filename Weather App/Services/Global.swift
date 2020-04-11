@@ -10,8 +10,6 @@ import Foundation
 import Alamofire
 import CoreData
 
-
-
 // MARK: - Dark Sky Api
 struct Config{
     static let baseLink = "https://api.darksky.net/forecast/"
@@ -43,12 +41,10 @@ enum localImagesNames {
     static let visibility = "Visibility"
 }
 
-
 // MARK: - share Weather data between viewControllers
 struct SharedData {
     static var weatherData : Weather?
 }
-
 
 // MARK: - Setting UserDefault Singleton
 struct WeatherSettings{

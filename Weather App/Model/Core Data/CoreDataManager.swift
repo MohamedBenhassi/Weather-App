@@ -9,8 +9,7 @@
 import Foundation
 import CoreData
 
-
-// MARK:- add and save City info into Offline Storage using Core Data
+// MARK:- add and save City info Offline Storage using Core Data
 func addCity(_ cityName : String, _ cityLati : Double, _ cityLong : Double){
     // check City if Exist
     let fetchRequest: NSFetchRequest<City> = City.fetchRequest()

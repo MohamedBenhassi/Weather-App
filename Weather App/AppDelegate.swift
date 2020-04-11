@@ -12,8 +12,6 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -24,18 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
-
-   
-    
-        func applicationWillTerminate(_ application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
             // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
             // Saves changes in the application's managed object context before the application terminates.
             self.saveContext()
-        }
+    }
 
-        // MARK: - Core Data Configuration
-
-        lazy var persistentContainer: NSPersistentContainer = {
+    // MARK: - Core Data Configuration
+    lazy var persistentContainer: NSPersistentContainer = {
             /*
              The persistent container for the application. This implementation
              creates and returns a container, having loaded the store for the
@@ -60,11 +54,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             })
             return container
-        }()
+    }()
 
-        // MARK: - Core Data Saving support
-
-        func saveContext () {
+    // MARK: - Core Data Saving support
+    func saveContext () {
             let context = persistentContainer.viewContext
             if context.hasChanges {
                 do {
@@ -76,9 +69,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
                 }
             }
-        }
-
     }
 
-    let ad = UIApplication.shared.delegate as! AppDelegate
-    let context = ad.persistentContainer.viewContext
+}
+
+let ad = UIApplication.shared.delegate as! AppDelegate
+let context = ad.persistentContainer.viewContext

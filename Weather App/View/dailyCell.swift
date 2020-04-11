@@ -8,7 +8,7 @@
 
 import UIKit
 
-class dailyCell: UITableViewCell {
+class DailyCell: UITableViewCell {
 
     @IBOutlet weak var dayNameLabel: UILabel!
     @IBOutlet weak var tempIcon: UIImageView!
