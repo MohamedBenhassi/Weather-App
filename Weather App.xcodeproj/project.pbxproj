@@ -88,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007FF55F24492BC50004D458 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				00B51158243CC02700E22B2E /* Core Data */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		009D4DD92432594F002F38C1 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +117,7 @@
 		009D4DE42432594F002F38C1 /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
+				007FF55F24492BC50004D458 /* Store */,
 				009D4DFB24325973002F38C1 /* Model */,
 				009D4DFA24325972002F38C1 /* View */,
 				009D4DF924325970002F38C1 /* Controller */,
@@ -154,10 +163,7 @@
 		009D4DFB24325973002F38C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				00B51158243CC02700E22B2E /* Core Data */,
 				009D4E0224336AD6002F38C1 /* Weather.swift */,
-				0050BF8A243A670D00DECF90 /* weatherOffline.xcdatamodeld */,
-				00B5115B243CC0AD00E22B2E /* WeatherManager.swift */,
 				00B5115D243CC11D00E22B2E /* DetailWeather.swift */,
 			);
 			path = Model;
@@ -171,6 +177,7 @@
 				00B5115F243CC17300E22B2E /* DateManager.swift */,
 				00B51161243CC20600E22B2E /* ErrorManager.swift */,
 				00AAB98B243CDE4A00203CEF /* Converter.swift */,
+				00B5115B243CC0AD00E22B2E /* WeatherManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +185,7 @@
 		00B51158243CC02700E22B2E /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				0050BF8A243A670D00DECF90 /* weatherOffline.xcdatamodeld */,
 				00B51159243CC04500E22B2E /* CoreDataManager.swift */,
 			);
 			path = "Core Data";
